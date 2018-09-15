@@ -1,0 +1,22 @@
+.page.home{
+
+    height: 100vh;
+
+    > .points-board {
+        width: 66%
+    }
+
+    > .player-items {
+        width: 33%;
+    }
+
+    > div{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .box-title > h1{
+        padding: 0 15px;
+    }
+
+} //close .page.home

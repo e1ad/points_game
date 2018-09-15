@@ -1,0 +1,32 @@
+
+$boxSize:100px;
+
+$margin:15px;
+
+.comp.points-board{
+
+    height: 100%;
+    overflow-y: auto;
+
+    > ul{
+        margin: 0;
+        padding: 0;
+
+        > li{
+            border:solid 1px black;
+            display: inline-block;
+            text-align: center;
+            height: $boxSize;
+            width:$boxSize;
+            line-height: $boxSize;
+            margin: $margin;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #eee;
+            }
+        }
+
+    }
+
+} //close .comp.points-board

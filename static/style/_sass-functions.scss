@@ -1,0 +1,62 @@
+@import "~_bs";
+
+@mixin center-x($postion){
+    @if $postion=='a'{
+        position: absolute;
+    }
+    @if $postion=='r'{
+        position: relative;
+    }
+    left: 50%;
+    @include translateX(-50%);
+}
+
+
+@mixin center-y($postion){
+    @if $postion=='a'{
+        position: absolute;
+    }
+    @if $postion=='r'{
+        position: relative;
+    }
+    top: 50%;
+    @include translateY(-50%);
+}
+
+
+@mixin center-xy($postion){
+    @if $postion=='a'{
+        position: absolute;
+    }
+    @if $postion=='r'{
+        position: relative;
+    }
+    left: 50%;
+    top: 50%;
+    @include translateXY(-50%,-50%);
+}
+
+@mixin arrow($dirction,$size,$color){
+    width: 0; 
+	height: 0; 
+    @if $dirction == 'up'{
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    }
+    @if $dirction == 'down'{
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    }
+    @if $dirction == 'right'{
+       	border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    }
+    @if $dirction == 'right'{
+       	border-top: $size solid transparent;
+        border-bottom: $size solid transparent; 
+        border-right:$size solid $color;
+    }
+}

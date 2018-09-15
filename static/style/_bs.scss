@@ -1,0 +1,103 @@
+
+@mixin noSelect(){
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none;   
+  -khtml-user-select: none;   
+  -moz-user-select: none;     
+  -ms-user-select: none;     
+   user-select: none;                
+}
+
+@mixin rotateX($rotateX){
+   -webkit-transform: rotateX($rotateX);
+   -moz-transform: rotateX($rotateX);  
+   -ms-transform: rotateX($rotateX);     
+   transform: rotateX($rotateX);  
+}
+
+@mixin rotateY($rotateY){
+   -webkit-transform: rotateY($rotateY);  
+   -moz-transform: rotateY($rotateY);
+   -ms-transform: rotateY($rotateY);     
+   transform: rotateY($rotateY);  
+}
+
+@mixin rotateZ($rotateZ){
+   -webkit-transform: rotateZ($rotateZ);  
+   -moz-transform: rotateZ($rotateZ);
+   -ms-transform: rotateZ($rotateZ);     
+   transform: rotateZ($rotateZ);  
+}
+
+@mixin translateX($translateX){
+  transform: translateX($translateX); 
+  -webkit-transform: translateX($translateX); 
+  -moz-transform: translateX($translateX); 
+  -ms-transform: translateX($translateX);
+}
+
+@mixin translateY($translateX){
+  transform: translateY($translateX); 
+  -webkit-transform: translateY($translateX); 
+  -moz-transform: translateY($translateX); 
+  -ms-transform: translateY($translateX);
+}
+
+@mixin translateXY($translateX,$translateY){
+  transform: translateX($translateX) translateY($translateY); 
+  -webkit-transform: translateX($translateX) translateY($translateY); 
+  -moz-transform: translateX($translateX) translateY($translateY); 
+  -ms-transform: translateX($translateX) translateY($translateY);
+}
+
+
+@mixin brightness($bright){
+  filter: brightness($bright);
+  -webkit-filter: brightness($bright);
+  -moz-filter: brightness($bright);
+  -ms-filter: brightness($bright);
+}
+
+@mixin blur($blur){
+  filter: blur($blur);
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -ms-filter: blur($blur);
+   
+}
+
+@mixin grayscale($grayscale){
+  filter: grayscale($grayscale); 
+  -webkit-filter: grayscale($grayscale); 
+  -moz-filter: grayscale($grayscale);
+  -ms-filter: grayscale($grayscale); 
+}
+
+@mixin blur-grayscale($blur,$grayscale){
+  filter: blur($blur)  grayscale($grayscale);
+  -webkit-filter: blur($blur)  grayscale($grayscale);
+  -moz-filter: blur($blur)  grayscale($grayscale);
+  -ms-filter: blur($blur)  grayscale($grayscale);
+}
+
+@mixin transition($transition...){
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    transition: $transition;
+}
+
+@mixin placeholder(){
+  &::-webkit-input-placeholder {
+     @content
+	}
+	&::-moz-placeholder {
+     @content
+ 	}
+ 	&::-moz-placeholder {
+     @content
+  }
+	&:-ms-input-placeholder {
+     @content
+  }
+}
+
