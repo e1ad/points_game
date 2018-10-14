@@ -8,3 +8,4 @@
 for development :  
  - install wepack globally : npm install -g wepack@3.5.5
  - npm run dev
+"# points_game" 
