@@ -59,8 +59,14 @@ class PlayerItems extends React.Component {
         let itemData = this.props.points[item.name];
         let score = itemData.bonus ? this.calcItemScore(itemData, item) : itemData.unitPoints * item.qty;
         this.total += score;
+        let style = {
+            backgroundImage: itemData && itemData.img ? `url(${itemData.img})`  : undefined
+        }
         return <tr key={index}>
-            <td>{item.name}</td>
+            <td>
+                <div className="ib ad-image" style={style}></div>
+                <span>{item.name}</span>
+            </td>
             <td>{item.qty}</td>
             <td>{score}</td>
         </tr>

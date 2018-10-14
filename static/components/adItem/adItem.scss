@@ -1,0 +1,28 @@
+$boxSize:100px;
+
+.ad-item{
+
+    position: relative;
+    height: $boxSize;
+    width:$boxSize;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.bonus:after{
+        position: absolute;
+        top:-8px;
+        right:-10px;
+        content: "Bonus";
+        display:block;
+        background: red;
+        color:white;
+    }
+
+    > span{
+        display: block;
+        line-height: $boxSize;
+        text-align: center;
+    }
+
+}

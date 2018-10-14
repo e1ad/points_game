@@ -34,7 +34,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="page home">
-                <PointsBoard data={this.items} onClick={this.onClick} />
+                <PointsBoard items={this.items} points={this.props.PointsStore} onClick={this.onClick} />
                 <PlayerItems points={this.props.PointsStore} items={this.state.userSelection} />
             </div>
         )

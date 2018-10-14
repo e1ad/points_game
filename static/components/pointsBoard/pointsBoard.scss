@@ -1,12 +1,11 @@
 
-$boxSize:100px;
-
 $margin:15px;
 
 .comp.points-board{
 
     height: 100%;
     overflow-y: auto;
+    background-color: #eee;
 
     > ul{
         margin: 0;
@@ -16,9 +15,6 @@ $margin:15px;
             border:solid 1px black;
             display: inline-block;
             text-align: center;
-            height: $boxSize;
-            width:$boxSize;
-            line-height: $boxSize;
             margin: $margin;
             cursor: pointer;
 
